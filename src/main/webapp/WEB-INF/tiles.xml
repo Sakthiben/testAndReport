@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="base.definition" template="/WEB-INF/jsp/layout/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/jsp/header.jsp"/>
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu.jsp"/>
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp"/>
+		<put-list-attribute name="stylesheets">
+			<add-attribute value="/resources/css/common/bootstrap.min.css" />			
+			<add-attribute value="/resources/fonts/font-awesome-4.6.3/css/font-awesome.min.css" />				
+			<add-attribute value="/resources/css/common/jquery.dataTables.min.css" />
+			<add-attribute value="/resources/css/common/dataTables.jqueryui.min.css" />
+			<add-attribute value="/resources/css/common/jquery-ui.css" />
+			<add-attribute value="/resources/fonts/raleway.css" />
+			<add-attribute value="/resources/css/common/datepicker3.css" />
+			<add-attribute value="/resources/css/common/buttons.jqueryui.min.css" />
+			<add-attribute value="/resources/css/common/styles.css" />
+		</put-list-attribute>    
+        <put-list-attribute name="javascripts">
+			<add-attribute value="/resources/js/common/jquery.min.js"/>  
+			<add-attribute value="/resources/js/common/bootstrap.min.js"/>
+			<add-attribute value="/resources/js/common/jquery.dataTables.min.js"/> 
+			<add-attribute value="/resources/js/common/datepicker.min.js"/> 	
+			<add-attribute value="/resources/js/common/buttons.print.min.js"/> 
+			<add-attribute value="/resources/js/common/dataTables.buttons.min.js"/> 
+			<add-attribute value="/resources/js/common/buttons.html5.min.js"/> 
+			<add-attribute value="/resources/js/common/pdfmake.min.js"/> 
+			<add-attribute value="/resources/js/common/vfs_fonts.js"/> 
+			<add-attribute value="/resources/js/common/jszip.min.js"/>  
+			<add-attribute value="/resources/js/common/dataTables.jqueryui.min.js"/> 
+			<add-attribute value="/resources/js/common/buttons.jqueryui.min.js"/>
+			<add-attribute value="/resources/js/common/bootstrap-filestyle.js"/>  
+			<add-attribute value="/resources/js/common/buttons.colVis.min.js"/> 
+			<add-attribute value="/resources/js/common/ChartNew.js"/>
+			<add-attribute value="/resources/js/common/shapesInChart.js"/> 
+			<add-attribute value="/resources/js/common/main.js"/> 
+	     </put-list-attribute>
+	</definition>
+	
+	<definition name="login.definition" template="/WEB-INF/jsp/layout/loginlayout.jsp">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="header" value="/WEB-INF/jsp/header.jsp" />
+	</definition>
+
+	<definition name="login" extends="login.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="login" value="/WEB-INF/jsp/login.jsp" />
+	</definition>
+	
+	<definition name="changeusername" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/changeusername.jsp" />
+	</definition>
+	
+	<definition name="changepassword" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/changepassword.jsp" />
+	</definition>
+	
+	<definition name="denied" extends="login.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="login" value="/WEB-INF/jsp/denied.jsp" />
+	</definition>
+	
+	<definition name="logout" extends="login.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="login" value="/WEB-INF/jsp/login.jsp" />
+	</definition>
+	
+	<definition name="aboutApps" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/aboutApps.jsp" />
+	</definition>
+	
+	<definition name="welcome" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/welcome.jsp" />
+	</definition>
+
+	<definition name="addEmployee" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addEmployee.jsp" />
+	</definition>
+	
+	<definition name="addEmployee" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addEmployee.jsp" />
+	</definition> 
+	
+	<definition name="users" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/users.jsp" />
+		<put-list-attribute name="javascripts" inherit="true">
+			<add-attribute value="/resources/js/content/testcase.js"/>
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="role" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/role.jsp" />
+	</definition>
+	
+	<definition name="register" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/register.jsp" />
+	</definition>
+	
+	<definition name="customer" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/customer.jsp" />
+	</definition> 
+	
+	<definition name="addtask" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/addtask.jsp" />
+		<put-list-attribute name="javascripts" inherit="true">
+			<add-attribute value="/resources/js/common/jquery.datetimepicker.full.js"/>
+		</put-list-attribute>
+		<put-list-attribute name="stylesheets" inherit="true">
+			<add-attribute value="/resources/css/common/jquery.datetimepicker.css" />
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="customerdetails" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/customerdetails.jsp" />
+	</definition>
+	
+	<definition name="customercreditbalance" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/customercreditbalance.jsp" />
+	</definition>
+	
+	<definition name="filemanager" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/filemanager.jsp" />
+	</definition>
+	
+	<definition name="itemdt" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/itemdt.jsp" />
+	</definition>
+	
+	<definition name="order" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/order.jsp" />
+	</definition>
+	
+	<definition name="salesOrder" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/salesOrder.jsp" />
+	</definition>
+	
+	<definition name="pos" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/pos.jsp" />
+	</definition>
+	
+	<definition name="project" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/project.jsp" />
+	</definition>
+	
+	<definition name="employeeAttend" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/employeeAttend.jsp" />
+	</definition>
+	
+	<definition name="empattendance" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/empattendance.jsp" />
+	</definition>
+	
+	<definition name="department" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/department.jsp" />
+	</definition>
+	
+	<definition name="dailytimesheet" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/dailytimesheet.jsp" />
+	</definition>
+	
+	<definition name="stockentry" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/stockentry.jsp" />
+	</definition>
+	
+	
+	<definition name="billing" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/billing.jsp" />
+	</definition>
+	
+
+	<definition name="accountsreceivable" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/accountsreceivable.jsp" />
+	</definition>
+	
+	<definition name="recruitopening" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/recruitopening.jsp" />
+	</definition>
+	
+	<definition name="recruitapplicant" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/recruitapplicant.jsp" />
+	</definition>
+	
+	<definition name="offerletter" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/offerletter.jsp" />
+	</definition>
+	
+	<definition name="relievingletter" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/relievingletter.jsp" />
+	</definition>
+	
+	<definition name="workingexperienceletter" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/workingexperienceletter.jsp" />
+	</definition>
+	
+	<definition name="leaveApp" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/leaveApp.jsp" />
+	</definition>
+	
+	<definition name="leaveType" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/leaveType.jsp" />
+	</definition>
+	
+	<definition name="HolidayList" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/HolidayList.jsp" />
+	</definition>
+	
+	<definition name="LeaveBlockList" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/LeaveBlockList.jsp" />
+	</definition>
+
+	<definition name="payroll" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/payroll.jsp" />
+	</definition>
+	
+	<definition name="processpr" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/processpr.jsp" />
+	</definition>
+	
+	<definition name="salarystruct" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/salarystruct.jsp" />
+	</definition>
+	
+	<definition name="salarycomp" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/salarycomp.jsp" />
+	</definition>
+	
+	<definition name="lead" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/lead.jsp" />
+	</definition>
+	
+	<definition name="grossprofit" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/grossprofit.jsp" />
+	</definition>
+	
+	<definition name="expenseclm" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/expenseclm.jsp" />
+	</definition>
+	
+	<definition name="appraisal" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/appraisal.jsp" />
+	</definition>
+	
+	<definition name="appraisaltemp" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/appraisaltemp.jsp" />
+	</definition>
+	
+	<definition name="designation" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/designation.jsp" />
+	</definition>
+	
+	<definition name="branch" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/branch.jsp" />
+	</definition>
+	
+	<definition name="employmentType" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/employmentType.jsp" />
+	</definition>
+		
+	<definition name="departments" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/departments.jsp" />
+	</definition>
+	
+	<definition name="masters" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/masters.jsp" />
+	</definition>
+	
+	<definition name="asset" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/asset.jsp" />
+	</definition>
+	
+	<definition name="accountingstatements" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/accountingstatements.jsp" />
+	</definition>
+	
+	<definition name="trialbalance" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/trialbalance.jsp" />
+	</definition>
+	
+	<definition name="companyandaccounts" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/companyandaccounts.jsp" />
+	</definition>
+	
+	<definition name="bankingandpayments" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/bankingandpayments.jsp" />
+	</definition>
+	
+	<definition name="taxes" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/taxes.jsp" />
+	</definition>
+	<!-- 
+	<definition name="budgetandcostcenter" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/budgetandcostcenter.jsp" />
+	</definition>
+	 -->
+	<definition name="tools" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/tools.jsp" />
+	</definition>
+	
+	<definition name="setup" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/setup.jsp" />
+	</definition>
+	
+	<definition name="tobill" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/tobill.jsp" />
+	</definition>
+	
+	<definition name="analytics" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/analytics.jsp" />
+	</definition>
+	
+	<definition name="prodorder" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/prodorder.jsp" />
+	</definition>
+
+	<definition name="productplan" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/productplan.jsp" />
+	</definition>
+	
+	<definition name="producttimest" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/producttimest.jsp" />
+	</definition>
+	
+	<definition name="productstock" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/productstock.jsp" />
+	</definition>
+	
+	<definition name="billofmaterial" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/billofmaterial.jsp" />
+	</definition>
+	
+	<definition name="itemstatus" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/itemstatus.jsp" />
+	</definition>
+	
+	<definition name="workstation" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/workstation.jsp" />
+	</definition>
+	
+	<definition name="operationbom" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/operationbom.jsp" />
+	</definition>
+	
+	<definition name="manufacture" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/manufacture.jsp" />
+	</definition>
+	
+	<definition name="openprorder" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/openprorder.jsp" />
+	</definition>
+	
+	<definition name="progprodorder" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/progprodorder.jsp" />
+	</definition>
+	
+	<definition name="completeprorder" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/completeprorder.jsp" />
+	</definition>
+	
+	<definition name="manufacturetools" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/manufacturetools.jsp" />
+	</definition>
+	
+	<definition name="bomtype" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/bomtype.jsp" />
+	</definition>
+	
+	<definition name="issueditem" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/issueditem.jsp" />
+	</definition>
+	
+	<definition name="BOM" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/BOM.jsp" />
+	</definition>
+	
+	<definition name="projects" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/projects.jsp" />
+	</definition>
+	
+	<definition name="timetracking" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/timetracking.jsp" />
+	</definition>
+	
+	<definition name="activitytype" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/activitytype.jsp" />
+	</definition>
+	
+	<definition name="activitycost" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/activitycost.jsp" />
+	</definition>
+	
+	<definition name="updatebank" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/updatebank.jsp" />
+	</definition>
+	
+	<definition name="matchpayments" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/matchpayments.jsp" />
+	</definition>
+	
+	<definition name="bankclearance" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/bankclearance.jsp" />
+	</definition>
+	
+	<definition name="bankreconcilation" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/bankreconcilation.jsp" />
+	</definition>
+	
+	<definition name="accountspayable" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/accountspayable.jsp" />
+	</definition>
+	
+	<definition name="generalledger" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/generalledger.jsp" />
+	</definition>
+	
+	<definition name="salestaxes" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/salestaxes.jsp" />
+	</definition>
+	
+	<definition name="taxrule" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/taxrule.jsp" />
+	</definition>
+	<!-- 
+	<definition name="salesregister" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/salesregister.jsp" />
+	</definition>
+	
+	<definition name="purchaseregister" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/purchaseregister.jsp" />
+	</definition>
+	 -->
+	<definition name="budgetvariancereport" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/budgetvariancereport.jsp" />
+	</definition>
+	
+	<definition name="periodclosingvoucher" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/periodclosingvoucher.jsp" />
+	</definition>
+	
+	<definition name="assetmovement" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/assetmovement.jsp" />
+	</definition>
+	
+	<definition name="ordereditemstobebilled" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/ordereditemstobebilled.jsp" />
+	</definition>
+	
+	<definition name="delivereditemstobebilled" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/delivereditemstobebilled.jsp" />
+	</definition>
+	
+	<definition name="purchaseorderitemsbilled" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/purchaseorderitemsbilled.jsp" />
+	</definition>
+	
+	<definition name="receiveditemsbilled" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/receiveditemsbilled.jsp" />
+	</definition>
+	
+	<definition name="address" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/address.jsp" />
+	</definition>
+	
+	<definition name="availablestock" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/availablestock.jsp" />
+	</definition>
+	
+	<definition name="contact" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/contact.jsp" />
+	</definition>
+	
+	<definition name="customergroup" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/customergroup.jsp" />
+	</definition>
+	
+	<definition name="itemgroup" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/itemgroup.jsp" />
+	</definition>
+	
+	<definition name="productbundle" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/productbundle.jsp" />
+	</definition>
+	
+	<definition name="quotation" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/quotation.jsp" />
+	</definition>
+	
+	<definition name="salesanalytics" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/salesanalytics.jsp" />
+	</definition>
+	
+	<definition name="salesperson" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/salesperson.jsp" />
+	</definition>
+	
+	<definition name="salespersontargetvariance" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/salespersontargetvariance.jsp" />
+	</definition>
+	
+	<definition name="territory" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/territory.jsp" />
+	</definition>
+	
+	<definition name="territorytargetvariance" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/territorytargetvariance.jsp" />
+	</definition>
+	
+	<definition name="issue" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/issue.jsp" />
+	</definition>
+	
+	<definition name="minutestofirstresponse" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/minutestofirstresponse.jsp" />
+	</definition>
+	
+	<definition name="supportanalytics" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/supportanalytics.jsp" />
+	</definition>
+	
+	<definition name="prmatreq" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/prmatreq.jsp" />
+	</definition>
+	
+	<definition name="prreqquot" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/prreqquot.jsp" />
+	</definition>
+	
+	<definition name="prsupplierquot" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/prsupplierquot.jsp" />
+	</definition>
+	
+	<definition name="prpurorder" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/prpurorder.jsp" />
+	</definition>
+	
+	<definition name="supplier" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/supplier.jsp" />
+	</definition>
+	
+	<definition name="suppliertype" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/suppliertype.jsp" />
+	</definition>
+	
+	<definition name="supplierstat" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/supplierstat.jsp" />
+	</definition>
+	
+	<definition name="itemGroup" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/itemGroup.jsp" />
+	</definition>
+	
+	<definition name="itemPrice" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/itemPrice.jsp" />
+	</definition>
+	
+	<definition name="productbundle" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/productbundle.jsp" />
+	</definition>
+	
+	<definition name="pricingrule" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/pricingrule.jsp" />
+	</definition>
+	
+	<definition name="puanalytics" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/puanalytics.jsp" />
+	</definition>
+	
+	<definition name="swsanalytics" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/swsanalytics.jsp" />
+	</definition>
+	<definition name="puordtrend" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/puordtrend.jsp" />
+	</definition>
+	
+	<definition name="itemrequest" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/itemrequest.jsp" />
+	</definition>
+	
+	<definition name="itemordered" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/itemordered.jsp" />
+	</definition>
+	<definition name="matreqsupply" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/matreqsupply.jsp" />
+	</definition>
+	
+	<definition name="itempuhistory" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/itempuhistory.jsp" />
+	</definition>
+	
+	<definition name="crmsaleslead" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/crmsaleslead.jsp" />
+	</definition>
+	
+	<definition name="crmsalescustomer" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/crmsalescustomer.jsp" />
+	</definition>
+	<definition name="crmsalescontact" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/crmsalescontact.jsp" />
+	</definition>
+	
+	<definition name="crmsalesoppo" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/crmsalesoppo.jsp" />
+	</definition>
+	
+	<definition name="crmterritory" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/crmterritory.jsp" />
+	</definition>
+	
+	<definition name="crmcustgroup" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/crmcustgroup.jsp" />
+	</definition>
+	
+	<definition name="crmcommunication" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/crmcommunication.jsp" />
+	</definition>
+	
+	
+	<definition name="crmtimeresp" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/crmtimeresp.jsp" />
+	</definition>
+	
+	<definition name="leadetail" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/leadetail.jsp" />
+	</definition>
+	
+	<definition name="inactivecust" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/inactivecust.jsp" />
+	</definition>
+	
+	<definition name="stktransentry" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/stktransentry.jsp" />
+	</definition>
+	
+	<definition name="stktransdeliver" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/stktransdeliver.jsp" />
+	</definition>
+	
+	<definition name="stktranspurrecpt" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/stktranspurrecpt.jsp" />
+	</definition>
+		
+	<definition name="stkrepledger" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/stkrepledger.jsp" />
+	</definition>
+	
+	<definition name="stkrepbalance" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/stkrepbalance.jsp" />
+	</definition>
+	<definition name="stkrepproject" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/stkrepproject.jsp" />
+	</definition>
+	
+	<definition name="stkrepageing" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/stkrepageing.jsp" />
+	</definition>
+	
+	<definition name="shippingrule" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/shippingrule.jsp" />
+	</definition>
+	
+	<definition name="installnote" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/installnote.jsp" />
+	</definition>
+	
+	<definition name="stockreconcile" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/stockreconcile.jsp" />
+	</definition>
+	
+	<definition name="packingslip" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/packingslip.jsp" />
+	</definition>
+	
+	<definition name="landvoucher" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/landvoucher.jsp" />
+	</definition>
+	
+	<definition name="stksetting" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/stksetting.jsp" />
+	</definition>
+	
+	<definition name="warehouse" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/warehouse.jsp" />
+	</definition>
+	
+	<definition name="unitofmeasure" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/unitofmeasure.jsp" />
+	</definition>
+	
+	
+	<definition name="brand" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/brand.jsp" />
+	</definition>
+	
+	<definition name="delnotetrend" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/delnotetrend.jsp" />
+	</definition>
+	
+	<definition name="purecptrend" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/purecptrend.jsp" />
+	</definition>
+	
+	<definition name="orditdeliver" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/orditdeliver.jsp" />
+	</definition>
+	
+	<definition name="puritordrec" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/puritordrec.jsp" />
+	</definition>
+		
+	<definition name="itshortreport" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/itshortreport.jsp" />
+	</definition>
+	
+	<definition name="reqittrans" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/reqittrans.jsp" />
+	</definition>
+	
+	<definition name="itpricerep" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/itpricerep.jsp" />
+	</definition>
+	
+	<definition name="itwiselevel" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/itwiselevel.jsp" />
+	</definition>
+	
+	<definition name="itemwisepureg" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/itemwisepureg.jsp" />
+	</definition>
+	
+	<definition name="paymentrequest" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/paymentrequest.jsp" />
+	</definition>
+	
+	<definition name="paymententry" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/paymententry.jsp" />
+	</definition>
+	
+	<definition name="inbox" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/inbox.jsp" />
+	</definition>
+	
+	<definition name="sent" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/sent.jsp" />
+	</definition>
+	
+	<definition name="trash" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/trash.jsp" />
+	</definition>
+	
+	<definition name="composeemail" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/composeemail.jsp" />
+		<put-list-attribute name="javascripts" inherit="true">
+			<add-attribute value="/resources/js/common/editor.js"/>
+		</put-list-attribute>
+		<put-list-attribute name="stylesheets" inherit="true">
+			<add-attribute value="/resources/css/common/editor.css" />
+		</put-list-attribute>
+	</definition>
+	
+	<definition name="emailsignature" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/emailsignature.jsp" />
+	</definition>
+	
+	<definition name="journalentry" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/journalentry.jsp" />
+	</definition>
+	
+	
+	<definition name="accountchart" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/accountchart.jsp" />
+	</definition>
+	
+	<definition name="companyaccount" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/companyaccount.jsp" />
+	</definition>
+	
+	<definition name="calendar" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/calendar.jsp" />
+	</definition>
+	
+	<definition name="profitandloss" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/profitandloss.jsp" />
+	</definition>
+	
+	<definition name="balancesheet" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/balancesheet.jsp" />
+	</definition>
+	
+	<definition name="cashflow" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/cashflow.jsp" />
+	</definition>
+	
+	<definition name="profitloss" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/profitloss.jsp" />
+	</definition>
+	
+	<definition name="ganttchart" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/ganttchart.jsp" />
+	</definition>
+	
+	<definition name="empleavebalance" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/empleavebalance.jsp" />
+	</definition>
+	
+	<definition name="empbirthday" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/empbirthday.jsp" />
+	</definition>
+	
+	
+	<definition name="empholidaywork" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/empholidaywork.jsp" />
+	</definition>
+	
+	<definition name="empsalregister" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/empsalregister.jsp" />
+	</definition>
+	
+	<definition name="monthattendsheet" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/monthattendsheet.jsp" />
+	</definition>
+	
+	<definition name="purtaxcharge" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/purtaxcharge.jsp" />
+	</definition>
+	
+	<definition name="saleregister" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/saleregister.jsp" />
+	</definition>
+	
+	
+	<definition name="purchaseregisters" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/purchaseregisters.jsp" />
+	</definition>
+	
+	<definition name="costcenter" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/costcenter.jsp" />
+	</definition>
+	
+	<definition name="budgetacctype" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/budgetacctype.jsp" />
+	</definition>
+	
+	
+	<definition name="budget" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/budget.jsp" />
+	</definition>
+	
+	
+	<definition name="budgetmonthdist" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/budgetmonthdist.jsp" />
+	</definition>
+	
+	
+	<definition name="budgetvarrep" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/budgetvarrep.jsp" />
+	</definition>
+	
+	<definition name="chequetemplate" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/chequetemplate.jsp" />
+	</definition>
+	
+	<definition name="UploadandDownload" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/UploadandDownload.jsp" />
+	</definition>
+	
+	<definition name="learn" extends="base.definition">
+		<put-attribute name="title" value="ERP Next Generation" />
+		<put-attribute name="body" value="/WEB-INF/jsp/learn.jsp" />
+		<put-list-attribute name="stylesheets" inherit="true">
+			<add-attribute value="/resources/css/common/lightbox.css" />
+		</put-list-attribute>
+		<put-list-attribute name="javascripts" inherit="true">
+			<add-attribute value="/resources/js/common/lightbox.js"/> 
+			<add-attribute value="/resources/js/common/jqueryhighlight.js"/> 
+		</put-list-attribute>
+	</definition>
+	
+</tiles-definitions>
