@@ -8,7 +8,7 @@
   <name>TestAndReportStudio Maven Webapp</name>
   <url>http://maven.apache.org</url>
    <properties>
-		<spring.version>4.2.0.RELEASE</spring.version>
+		<spring.version>5.3.19</spring.version>
 		<spring-security.version>4.0.2.RELEASE</spring-security.version>
 		<spring-orm-version>3.1.0.RELEASE</spring-orm-version>
 		<hibernate.version>4.3.8.Final</hibernate.version>
